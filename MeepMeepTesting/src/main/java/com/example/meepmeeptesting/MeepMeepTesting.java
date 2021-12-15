@@ -11,7 +11,7 @@ public class MeepMeepTesting {
 
         // Declare a MeepMeep instance
         // With a field size of 800 pixels
-        MeepMeep mm = new MeepMeep(800)
+        MeepMeep mm = new MeepMeep(750)
                 // Set field image
                 .setBackground(MeepMeep.Background.FIELD_FREIGHT_FRENZY)
                 // Set theme
@@ -21,9 +21,9 @@ public class MeepMeepTesting {
                 // Set constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
                 .setConstraints(60, 60, Math.toRadians(180), Math.toRadians(180), 15)
                 .followTrajectorySequence(drive ->
-                        drive.trajectorySequenceBuilder(new Pose2d(0, 0, 0))
-                                .splineToSplineHeading(new Pose2d(-15, -24, Math.toRadians(180)), Math.toRadians(0))
-                                .splineToSplineHeading(new Pose2d(60, -50, Math.toRadians(-90)), Math.toRadians(270))
+                        drive.trajectorySequenceBuilder(new Pose2d(-60, -40, 0))
+                                .splineToSplineHeading(new Pose2d(22, -65, Math.toRadians(0)), Math.toRadians(0))
+                                .splineToSplineHeading(new Pose2d(60, -55, Math.toRadians(0)), Math.toRadians(0))
                                 .build()
                 )
                 .start();
